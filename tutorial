@@ -1,0 +1,106 @@
+# Next-Gen Authentication System
+
+## Overview
+This project implements a next-generation authentication system that combines **brainwave authentication (EEG-based)**, **AI-enhanced user validation**, and **Zero-Knowledge Proof (ZKP) cryptography**, all secured on the **blockchain**.
+
+## Project Structure
+```
+next-gen-auth-system/
+│── backend/
+│   ├── eeg_auth/
+│   │   ├── eeg_reader.py  # Reads EEG data
+│   │   ├── eeg_processor.py  # Processes brainwave patterns
+│   │   ├── ai_authenticator.py  # AI-enhanced authentication
+│   │   └── model/  # ML models
+│   ├── zk_auth/
+│   │   ├── zk_verifier.py  # ZKP verification system
+│   │   ├── zk_prover.py  # Generates ZKP proofs
+│   │   ├── contract/  # Blockchain smart contracts for secure login
+│   ├── api.py  # Main FastAPI server
+│── frontend/
+│   ├── public/
+│   │   ├── index.html  # Landing Page
+│   ├── src/
+│   │   ├── App.vue  # Main Vue App
+│   │   ├── components/
+│   │   │   ├── EEGGraph.vue  # Brainwave visualizer
+│   │   │   ├── AIAuth.vue  # AI-based auth UI
+│   │   │   ├── ZKPAuth.vue  # Zero-Knowledge Proof UI
+│   │   ├── assets/
+│   ├── package.json
+│── blockchain/
+│   ├── contract.sol  # Smart contract for auth verification
+│── README.md
+```
+
+## Technologies Used
+- **Backend:** FastAPI, Python, Scikit-learn, PyTorch, Web3.py
+- **Frontend:** Vue.js
+- **AI/ML:** EEG signal processing (MNE-Python), Neural Networks (PyTorch)
+- **Blockchain:** Solidity, Web3.js, Truffle
+- **Cryptography:** Zero-Knowledge Proofs (ZKP)
+
+## How It Works
+1. **EEG Authentication:** Reads brainwaves, processes them, and verifies the user using AI models.
+2. **AI-Enhanced Security:** Uses a trained neural network to validate unique brainwave signatures.
+3. **Zero-Knowledge Proofs:** Enables authentication without revealing sensitive information.
+4. **Blockchain for Security:** Stores authentication data securely on Ethereum.
+
+## Setup Instructions
+
+### 1️⃣ Backend (FastAPI, AI, Blockchain)
+#### Install Dependencies
+```bash
+pip install fastapi uvicorn torch scikit-learn web3 mne
+```
+#### Run the Backend Server
+```bash
+uvicorn backend.api:app --reload
+```
+
+### 2️⃣ Frontend (Vue.js Web UI)
+#### Install Dependencies
+```bash
+cd frontend
+npm install
+```
+#### Run the Frontend Server
+```bash
+npm run dev
+```
+
+### 3️⃣ Blockchain Smart Contract Deployment
+#### Install Solidity Compiler & Truffle
+```bash
+npm install -g truffle
+```
+#### Deploy the Smart Contract
+```bash
+truffle migrate --network rinkeby
+```
+
+## Learning Roadmap
+
+### 🔥 Technologies & Resources
+| Technology | 📖 Resources |
+|------------|-------------|
+| **FastAPI (Backend API)** | [FastAPI Docs](https://fastapi.tiangolo.com/) |
+| **Brainwave Processing (EEG)** | [MNE-Python](https://mne.tools/stable/index.html) |
+| **Machine Learning (AI Authentication)** | scikit-learn + TensorFlow tutorials |
+| **Zero-Knowledge Proofs (ZKP)** | [ZKP for Developers](https://zk-learning.org/) |
+| **Vue.js (Frontend UI)** | [Vue.js Docs](https://vuejs.org/) |
+| **Solidity (Blockchain Smart Contracts)** | [CryptoZombies Solidity Course](https://cryptozombies.io/) |
+| **Web3 (Blockchain Integration)** | [Web3.js](https://web3js.readthedocs.io/) |
+
+## Future Improvements
+- **Optimize EEG Processing with Deep Learning**
+- **Implement Multi-Modal Authentication (EEG + Face ID)**
+- **Enhance UI for Better User Experience**
+- **Deploy Smart Contracts on Polygon for Lower Gas Fees**
+
+## Contributors
+- **Mrityunjay Chakraborty** - AI & Blockchain Developer
+
+---
+**Let's build the future of authentication! 🚀**
+
